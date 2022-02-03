@@ -1,0 +1,35 @@
+package avaInter2_ArthurJosedosSantos;
+
+import java.util.HashMap;
+
+import javax.swing.JOptionPane;
+
+public class AppAvaInter2 {
+
+	public static void main(String[] args) {
+		
+		int cont=0, quantidade=0;
+		String nome, laboratorio, unidade;
+		
+		HashMap<String, String> unidadesdemedidas = new HashMap<>();
+			unidadesdemedidas.put("ml","mililitro");
+			unidadesdemedidas.put("cp","comprimido");
+			unidadesdemedidas.put("gr","grama");
+			unidadesdemedidas.put("un","unidade");
+			quantidade = Integer.parseInt(JOptionPane.showInputDialog("Digite o nome do remedio: "));
+			do {
+				 nome = JOptionPane.showInputDialog("Digite o nome do remedio: ");
+				 laboratorio = JOptionPane.showInputDialog("Digite o nome do laboratorio: ");
+				 unidade = JOptionPane.showInputDialog("Digite o nome do remedio: ");
+				if(unidade.length()>2) {
+					while(unidade.length()>2) {
+						unidade = JOptionPane.showInputDialog("Digite o nome do remedio: ");
+					}
+					
+				}
+				cont+=1;
+			}while(quantidade != cont);
+
+	}
+
+}

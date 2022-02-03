@@ -1,0 +1,35 @@
+package AppSobrecarga;
+
+import java.util.Locale;
+import javax.swing.JOptionPane;
+
+
+public class App {
+
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+			Locale.setDefault(Locale.US);
+			int opcao_menu;
+			
+			do {
+				opcao_menu = Integer.parseInt(JOptionPane.showInputDialog(null,"    Menu\n1 - Círculo\n2 - Triângulo\n3 - Quadrado\n4) SAIR"));
+				switch (opcao_menu) {
+					case 1:
+						Circulo circulo = new Circulo(4,6);
+						circulo.exibe(3);
+						Circulo circulo2 = new Circulo(3,4,6);
+						circulo2.exibe();
+						break;
+					case 2:
+						Triangulo triangulo = new Triangulo(3, 4);
+						triangulo.exibe();
+						break;
+					case 3:
+						Quadrado quadrado = new Quadrado(4);
+						quadrado.exibe();
+						break;
+				}
+			}while(opcao_menu != 4);
+		}
+
+	}

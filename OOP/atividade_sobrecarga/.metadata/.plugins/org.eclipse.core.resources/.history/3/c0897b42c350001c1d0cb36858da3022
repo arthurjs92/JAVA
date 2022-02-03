@@ -1,0 +1,23 @@
+package AppSobrecarga;
+
+import javax.swing.JOptionPane;
+
+public class Triangulo {
+	
+	private double base, altura;
+	
+	public Triangulo (double base, double altura) {
+		this.base = base;
+		this.altura = altura;
+	}
+	
+	public static double area(double base, double altura){
+        return ((base*altura)/2);
+    }
+    
+    
+    public static void exibe(){
+    	JOptionPane.showMessageDialog(null, "A área do triângulo de base = " +base+" e de altura = "+altura+" vale: "+ area(), null, 1, null);
+    }  
+    
+}

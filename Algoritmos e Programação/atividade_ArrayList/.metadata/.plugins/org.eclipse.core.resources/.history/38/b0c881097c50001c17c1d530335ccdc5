@@ -1,0 +1,18 @@
+package exercicio4;
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String nome, telefone, celular, email;
+		nome = JOptionPane.showInputDialog("Digite o nome do contato: ");
+		telefone = JOptionPane.showInputDialog("Digite o número do telefone: ");
+		celular = JOptionPane.showInputDialog("Digite o número do celular: ");
+		email = JOptionPane.showInputDialog("Digite o email: ");
+
+
+
+	}
+
+}

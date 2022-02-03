@@ -1,0 +1,46 @@
+package AppSobrecarga;
+
+import java.util.Locale;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+
+public class App {
+
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+			Locale.setDefault(Locale.US);
+			Scanner sc = new Scanner(System.in);		
+			int opcao_menu;
+			opcao_menu = Integer.parseInt(JOptionPane.showInputDialog("    Menu\n1 - Círculo\n2 - Triângulo\n3 - Quadrado\n4) SAIR"));
+			
+			switch (opcao_menu) {
+				case 1:
+					double raio = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor do raio: "));
+					double xcentro = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor do xcentro: "));
+					double ycentro = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor do ycentro: "));
+					
+					new Circulo(raio, xcentro, ycentro);
+					double area_circulo = Circulo.area(raio);
+					Circulo.exibe(raio, xcentro, ycentro, area_circulo);
+					break;
+					
+				case 2: 
+					double base = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor da base: "));
+					double altura = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor da altura: "));
+					
+					double area_triangulo = Triangulo.area(base, altura);
+					Triangulo.exibe(base, altura, area_triangulo);
+					break;
+				case 3:
+					double lado = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor do lado: "));
+
+					double area_quadrado = Quadrado.area(lado);
+					Quadrado.exibe(lado, area_quadrado);
+					break;
+			}
+			sc.close();	
+			
+		}
+
+	}

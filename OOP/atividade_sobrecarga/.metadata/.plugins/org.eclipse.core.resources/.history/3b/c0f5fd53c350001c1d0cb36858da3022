@@ -1,0 +1,18 @@
+package AppSobrecarga;
+
+import javax.swing.JOptionPane;
+
+public class Quadrado {
+	
+	private double lado;
+
+	public static double area(double lado){
+        return (lado*lado);
+    }
+    
+    
+    public static void exibe(double lado, double area){
+    	JOptionPane.showMessageDialog(null, "A área do quadrado de lado = " +lado+" vale: "+ area, null, 1, null);
+    }  
+
+}

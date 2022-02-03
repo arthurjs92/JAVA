@@ -1,0 +1,56 @@
+package avaInter2_ArthurJosedosSantos;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import javax.swing.JOptionPane;
+
+public class AppAvaInter2 {
+
+	public static void main(String[] args) {
+		
+		int cont=0, quantidade=0, i=0, op=0;
+		String nome, laboratorio, unidade, nomeAnimal, observacoes, queixa, historico;
+		
+		HashMap<String, String> unidadesdemedidas = new HashMap<>();
+			unidadesdemedidas.put("ml","mililitro");
+			unidadesdemedidas.put("cp","comprimido");
+			unidadesdemedidas.put("gr","grama");
+			unidadesdemedidas.put("un","unidade");
+			quantidade = Integer.parseInt(JOptionPane.showInputDialog("Quantos remedios?"));
+			ArrayList<Remedio> listadeRemedios = new ArrayList<>();
+			do {
+				 nome = JOptionPane.showInputDialog("Digite o nome do remedio: ");
+				 laboratorio = JOptionPane.showInputDialog("Digite o nome do laboratorio: ");
+				 unidade = JOptionPane.showInputDialog("Digite a unidade: ");
+				if(unidade.length()>2) {
+					while(unidade.length()>2) {
+						unidade = JOptionPane.showInputDialog("Digite o nome do remedio: ");
+					}
+				}
+				listadeRemedios.add(new Remedio(nome, laboratorio, unidade));
+				cont+=1;
+			}while(quantidade != cont);
+			
+			nomeAnimal = JOptionPane.showInputDialog("Nome do animal: ");		
+			observacoes = JOptionPane.showInputDialog("Observacoes: ");
+			queixa = JOptionPane.showInputDialog("Qual a queixa: ");
+			historico = JOptionPane.showInputDialog("Historico: ");
+			
+			Consulta c = new Consulta(nomeAnimal,observacoes,queixa,historico);
+			
+//			for(i=0;i<listadeRemedios.size();i++) {
+//				Remedio remedio = listadeRemedios.get(i);
+//				JOptionPane.showMessageDialog(null, "("+(i+1)+")" + " : "+remedio.getNome()+" - " + remedio.getLaboratorio());
+//			}
+			
+			for(Remedio remedio : listadeRemedios) {
+				i++;
+				JOptionPane.showMessageDialog(null, "("+(i+1)+")" + " : "+remedio.getNome()+" - " + remedio.getLaboratorio());
+			}
+			
+//			op = Integer.parseInt(JOptionPane.showInputDialog("Digite a opcao do remedio desejado: "));
+			
+	}
+
+}

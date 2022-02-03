@@ -1,0 +1,48 @@
+package exercicio4;
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String nome, telefone, celular, email;
+		int menu;
+		//nome = JOptionPane.showInputDialog("Digite o nome do contato: ");
+		//telefone = JOptionPane.showInputDialog("Digite o número do telefone: ");
+		//celular = JOptionPane.showInputDialog("Digite o número do celular: ");
+		//email = JOptionPane.showInputDialog("Digite o email: ");
+		
+		ArrayList<Contato> listaContatos = new ArrayList<Contato>();
+		
+		menu = Integer.parseInt(JOptionPane.showInputDialog("****************************************\n                           Menu\n 1. Inserir Contato\n 2. Listar Contatos\n3.Sair\n ****************************************\n"));
+   
+		do {
+			switch (menu) {
+			case 1:
+				nome = JOptionPane.showInputDialog("Digite o nome do contato: ");
+				telefone = JOptionPane.showInputDialog("Digite o número do telefone: ");
+				celular = JOptionPane.showInputDialog("Digite o número do celular: ");
+				email = JOptionPane.showInputDialog("Digite o email: ");
+				listaContatos.add(new Contato(nome, telefone, celular, email));
+				break;
+			case 2:
+				for (int i=0; i < listaContatos.size();i++) {
+					Contato contato = listaContatos.get(i);
+					System.out.println(contato.getNome() + "   " + contato.getTelefone() + "   " + contato.getCelular() + "   " + contato.getEmail());
+					}
+				for(int i= 0; i <= listaContatos.size(); i++) {
+					JOptionPane.showMessageDialog(null, listaContatos.get(i));
+				}
+				break;
+			}
+			
+			menu = Integer.parseInt(JOptionPane.showInputDialog("****************************************\n                           Menu\n 1. Inserir Contato\n 2. Listar Contatos\n3.Sair\n ****************************************\n"));
+		} while (menu !=3);
+		
+		
+		
+	}
+
+}

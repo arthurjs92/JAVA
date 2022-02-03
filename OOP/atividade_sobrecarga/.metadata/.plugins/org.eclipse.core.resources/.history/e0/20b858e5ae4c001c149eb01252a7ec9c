@@ -1,0 +1,39 @@
+package AppSobrecarga;
+
+import javax.swing.JOptionPane;
+
+import AppSobrecarga.App;
+
+public class Circulo {
+	
+private double raio, xcentro, ycentro;
+	
+	public Circulo (double raio, double xcentro, double ycentro) {
+		this.raio = raio;
+		this.xcentro = xcentro;
+		this.ycentro = ycentro;
+	}
+	
+	public Circulo(double xcentro, double ycentro) {
+		this.xcentro = xcentro;
+		this.ycentro = ycentro;
+	}
+	
+	public static double area(double raio){
+        return (Math.PI * Math.pow(raio, 2));
+    }
+	
+	public static int area(double xcentro, double ycentro){
+		double raio = App();
+        return 0;
+    }
+	    
+	    
+	public static void exibe(double raio, double xcentro, double ycentro, double area){
+    	JOptionPane.showMessageDialog(null, "A área do centro "+xcentro+", "+ycentro+" e raio = "+raio+" vale: "+ area, null, 1, null);	    
+    }  
+	    
+
+}
+
+

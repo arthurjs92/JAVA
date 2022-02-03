@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+E:\FACULDADE\IFTM\SPI\2 - PERIODO\2 - PROGRAMACAO ORIENTADA A OBJETO 1 (CLARIMUNDO)\WORKSPACE JAVA\clarimundo\atividade_sobrecarga\.metadata\.plugins\org.eclipse.jdt.core
+663035744.index
+482065958.index
